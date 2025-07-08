@@ -6,5 +6,6 @@ Licensed under the [MIT License](./LICENSE) — feel free to use, modify, or sha
 ## Included Plugins & Features
 
 * **lazy.nvim** – Efficient, modular plugin manager.
+* **neo-tree** – Elegant file explorer.
 
 > You can easily add or remove languages by editing the [`languages.lua`](./lua/configs/languages.lua) file.

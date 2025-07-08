@@ -27,3 +27,7 @@ set("v", "<A-j>", ":m '>+1<CR>gv=gv", "Move lines down")
 -- Clipboard key maps
 set({ "n", "v" }, "<leader>y", '"+y', "Yank")
 set({ "n", "v" }, "<leader>p", '"+p', "Paste")
+
+-- plugins
+-- Neo-tree
+set("n", "<leader>e", "<cmd>Neotree toggle<CR>", "Toggle Neo-tree")

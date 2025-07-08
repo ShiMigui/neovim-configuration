@@ -15,3 +15,5 @@ if not vim.loop.fs_stat(lazy) then -- Does a loop to clone lazy.nvim repository,
 	})
 end
 vim.opt.rtp:prepend(lazy)
+
+require("lazy").setup("plugins")
