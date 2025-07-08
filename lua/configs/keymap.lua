@@ -1,7 +1,4 @@
-local set = function(md, cmd, fn, desc)
-	vim.keymap.set(md, cmd, fn, { noremap = true, silent = true, desc = desc })
-end
-
+local set = require("configs.set")
 -- Editor key maps
 set("n", "fw", "<cmd>w<CR>", "Save current file")
 set("n", "fq", "<cmd>q<CR>", "Quit current window")
@@ -27,7 +24,3 @@ set("v", "<A-j>", ":m '>+1<CR>gv=gv", "Move lines down")
 -- Clipboard key maps
 set({ "n", "v" }, "<leader>y", '"+y', "Yank")
 set({ "n", "v" }, "<leader>p", '"+p', "Paste")
-
--- plugins
--- Neo-tree
-set("n", "<leader>e", "<cmd>Neotree toggle<CR>", "Toggle Neo-tree")

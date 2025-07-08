@@ -1,3 +1,5 @@
+local set = require("configs.set")
+
 local mapping = {
 	L = "expand_all_subnodes",
 	H = "close_all_subnodes",
@@ -36,6 +38,7 @@ local config = function()
 			},
 		},
 	})
+	set("n", "<leader>e", "<cmd>Neotree toggle<CR>", "Toggle Neo-tree")
 end
 
 return {
