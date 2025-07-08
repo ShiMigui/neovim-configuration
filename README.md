@@ -9,5 +9,7 @@ Licensed under the [MIT License](./LICENSE) — feel free to use, modify, or sha
 * **neo-tree** – Elegant file explorer.
 * **bufferline** – Tab-like buffer explorer.
 * **treesitter** – Parser generator tool.
+* **Mason** – A LSP installer.
+* **nvim-cmp** – A autocomplete plugin.
 
 > You can easily add or remove languages by editing the [`languages.lua`](./lua/configs/languages.lua) file.
