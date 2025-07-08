@@ -43,6 +43,7 @@ end
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	keys = "<leader>e",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
