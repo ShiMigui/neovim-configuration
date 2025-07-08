@@ -1,6 +1,4 @@
-local formatters = {
-	["_"] = { "prettier" },
-}
+local formatters = require("custom.formatters")
 
 return {
 	"stevearc/conform.nvim",

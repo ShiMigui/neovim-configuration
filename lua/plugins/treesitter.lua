@@ -1,4 +1,4 @@
-local languages = {}
+local languages = require("custom.languages")
 
 return {
 	{

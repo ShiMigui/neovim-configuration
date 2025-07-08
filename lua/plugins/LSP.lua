@@ -1,4 +1,4 @@
-local servers = {}
+local language_list = require("custom.language_list")
 
 return {
 	"williamboman/mason.nvim",
@@ -9,7 +9,7 @@ return {
 	config = function()
 		require("mason").setup()
 		require("mason-lspconfig").setup({
-			ensure_installed = servers,
+			ensure_installed = language_list,
 			automatic_installation = true,
 		})
 
@@ -17,7 +17,7 @@ return {
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		local objs = { capabilities = capabilities }
 
-		for _, server in ipairs(servers) do
+		for _, server in ipairs(language_list) do
 			lspconfig[server].setup(objs)
 		end
 	end,
