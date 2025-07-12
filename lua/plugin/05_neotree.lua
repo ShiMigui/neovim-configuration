@@ -1,4 +1,4 @@
-local set = require("configs.set")
+local set = require("config.set")
 
 local mapping = {
 	L = "expand_all_subnodes",
@@ -43,7 +43,6 @@ end
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-	keys = "<leader>e",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",

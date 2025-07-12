@@ -1,4 +1,4 @@
-local set = require("configs.set")
+local set = require("config.set")
 
 return {
 	"akinsho/bufferline.nvim",

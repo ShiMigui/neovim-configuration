@@ -1,4 +1,5 @@
-local set = require("configs.set")
+local set = require("config.set")
+
 -- Editor key maps
 set("n", "fw", "<cmd>w<CR>", "Save current file")
 set("n", "fq", "<cmd>q<CR>", "Quit current window")
