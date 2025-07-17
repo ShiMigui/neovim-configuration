@@ -1,4 +1,4 @@
-local set = require("config.set")
+local set = require("dumb-nvim.config.set")
 
 set("n", "<leader>d", vim.diagnostic.open_float, "Show diagnostic")
 

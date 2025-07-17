@@ -1,4 +1,4 @@
-local set = require("config.set")
+local set = require("dumb-nvim.config.set")
 
 set("n", "Q", "<cmd>bd<CR>", "Close buffer")
 set("n", "<C-Tab>", "<cmd>BufferLineCycleNext<CR>", "Next buffer")

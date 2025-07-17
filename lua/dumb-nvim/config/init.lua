@@ -25,7 +25,7 @@ local cfgs = {
 
 for k, v in pairs(cfgs) do vim.opt[k] = v end
 
-require("config.keymap")
+require("dumb-nvim.config.keymap")
 
 vim.diagnostic.config({
 	virtual_text = {
