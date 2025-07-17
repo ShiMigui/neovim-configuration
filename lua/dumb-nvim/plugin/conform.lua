@@ -1,4 +1,6 @@
-local formatters = {}
+local formatters = {
+	lua = { "stylua" },
+}
 
 return {
 	"stevearc/conform.nvim",
@@ -9,5 +11,5 @@ return {
 			timeout_ms = 500,
 			lsp_fallback = true,
 		},
-	}
+	},
 }

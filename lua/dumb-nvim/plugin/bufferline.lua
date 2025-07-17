@@ -18,7 +18,7 @@ return {
 			persist_buffer_sort = false,
 			show_close_icon = false,
 
-			offsets = { { filetype = "neo-tree" }, },
+			offsets = { { filetype = "neo-tree" } },
 		},
 	},
 }

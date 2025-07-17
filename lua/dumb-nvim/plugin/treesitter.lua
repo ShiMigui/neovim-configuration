@@ -1,10 +1,10 @@
-local languages = { "lua" }
+local languages = { "lua", "yaml", "php", "html", "css", "javascript" }
 
 return {
-	'nvim-treesitter/nvim-treesitter',
+	"nvim-treesitter/nvim-treesitter",
 	priority = 995,
-	branch = 'main',
-	build = ':TSUpdate',
+	branch = "main",
+	build = ":TSUpdate",
 	opts = {
 		ensure_installed = languages,
 		auto_install = true, -- Set true, if you have installed `tree-sitter` CLI tool, otherwise is recommended false.
@@ -13,7 +13,7 @@ return {
 			additional_vim_regex_highlighting = false,
 		},
 		indent = {
-			enable = true
+			enable = true,
 		},
 	},
 }

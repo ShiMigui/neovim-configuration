@@ -5,7 +5,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
-	cmd = "Neotree",
+	event = "VimEnter",
 	keys = {
 		{ "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Toggle Neo-tree" },
 	},
@@ -30,16 +30,19 @@ return {
 		event_handlers = {
 			{
 				event = "file_opened",
-				handler = function() vim.cmd "Neotree close" end,
+				handler = function()
+					vim.cmd("Neotree close")
+				end,
 			},
 		},
 		filesystem = {
 			filtered_items = {
 				show_hidden_count = false,
 				hide_dotfiles = false,
-				hide_gitignored = true,
+				hide_gitignored = false,
 				hide_by_name = { ".git", "node_modules" },
 			},
+			hijack_netrw_behavior = "open_default",
 		},
 	},
 }

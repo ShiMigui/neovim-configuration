@@ -15,3 +15,8 @@ set("v", "<A-j>", ":m '>+1<CR>gv=gv", "Move lines down")
 
 set({ "n", "v" }, "<leader>y", '"+y', "Yank")
 set({ "n", "v" }, "<leader>p", '"+p', "Paste")
+
+set("n", "j", "gj", "Down")
+set("n", "k", "gk", "Up")
+set("v", "j", "gj", "Down")
+set("v", "k", "gk", "Up")
