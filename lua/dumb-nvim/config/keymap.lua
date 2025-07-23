@@ -13,8 +13,10 @@ set("n", "<A-j>", ":m .+1<CR>==", "Move line down")
 set("v", "<A-k>", ":m '<-2<CR>gv=gv", "Move lines up")
 set("v", "<A-j>", ":m '>+1<CR>gv=gv", "Move lines down")
 
-set({ "n", "v" }, "<leader>y", '"+y', "Yank")
-set({ "n", "v" }, "<leader>p", '"+p', "Paste")
+local clipboard_modes = { "n", "v", "i" }
+set(clipboard_modes, "<leader>y", '"+y', "Yank")
+set(clipboard_modes, "<leader>p", '"+p', "Paste")
+set(clipboard_modes, "<S-Insert>", '"+p', "Paste")
 
 set("n", "j", "gj", "Down")
 set("n", "k", "gk", "Up")

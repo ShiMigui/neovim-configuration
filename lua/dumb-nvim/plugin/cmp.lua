@@ -21,10 +21,9 @@ return {
 			mapping = cmp.mapping.preset.insert({
 				["<Tab>"] = cmp.mapping.select_next_item(),
 				["<S-Tab>"] = cmp.mapping.select_prev_item(),
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<Esc>"] = cmp.mapping(function(fallback)
-					local m = cmp.visible() and cmp.abort or fallback
+					local m = (cmp.visible() and cmp.abort or fallback)
 					m()
 				end, { "i", "s" }),
 			}),

@@ -1,6 +1,4 @@
-local formatters = {
-	lua = { "stylua" },
-}
+local formatters = {}
 
 return {
 	"stevearc/conform.nvim",
