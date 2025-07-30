@@ -8,7 +8,7 @@ return {
 	opts = {
 		pickers = {
 			find_files = {
-				theme = "ivy",
+				theme = "dropdown",
 			},
 		},
 		extensions = {
@@ -21,15 +21,17 @@ return {
 		tel.load_extension("fzf")
 
 		local tin = require("telescope.builtin")
-		local set = vim.keymap.set
+		local set = function(cmd, fn)
+			return vim.keymap.set("n", cmd, fn)
+		end
 
-		set("n", "<space>ff", tin.find_files)
-		set("n", "<space>en", function()
+		set("<C-f><C-f>", tin.find_files)
+		set("<C-f><C-g>", tin.live_grep)
+		set("<C-f><C-b>", tin.buffers)
+		set("<C-f><C-h>", tin.help_tags)
+		set("<C-f><C-o>", tin.oldfiles)
+		set("<C-f><C-n>", function()
 			tin.find_files({ cwd = vim.fn.stdpath("config") })
 		end)
-		set("n", "<space>fg", tin.live_grep)
-		set("n", "<space>fb", tin.buffers)
-		set("n", "<space>fh", tin.help_tags)
-		set("n", "<space>fo", tin.oldfiles)
 	end,
 }

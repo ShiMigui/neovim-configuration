@@ -15,7 +15,8 @@ return {
 				lua = { "stylua" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				yaml = { "prettierd", "prettier", stop_after_first = true },
-				sql = { "pgformatter" },
+				sql = { "sql-formatter" },
+				php = { "php-cs-fixer", stop_after_first = true },
 			},
 			format_on_save = {
 				timeout_ms = 1000,

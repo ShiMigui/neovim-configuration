@@ -4,8 +4,8 @@ return {
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	keys = {
-		{ "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer", mode = "n" },
-		{ "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = "n" },
+		{ "<C-Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer", mode = { "n", "i" } },
+		{ "<C-S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = { "n", "i" } },
 		{ "<C-b><C-q>", "<cmd>bd<cr>", desc = "Close Buffer", mode = "n" },
 		{ "<C-b><C-n>", "<cmd>enew<cr>", desc = "New empty buffer", mode = "n" },
 		{ "<C-b><C-p>", "<cmd>BufferLineTogglePin<cr>", desc = "Toggle pin buffer", mode = "n" },

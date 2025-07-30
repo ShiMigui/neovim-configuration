@@ -3,24 +3,33 @@
 -- MasonLSPConfig: Auto-configures all languages installed on Mason
 --]]
 return {
-	"mason-org/mason-lspconfig.nvim",
-	dependencies = {
-		"neovim/nvim-lspconfig",
-		{
-			"folke/lazydev.nvim",
-			ft = "lua",
-			opts = { library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } } },
+	"neovim/nvim-lspconfig",
+	dependencies = "mason-org/mason-lspconfig.nvim",
+	opts = {
+		servers = {
+			lua_ls = {},
+			html = {},
+			ts_ls = {},
+			sqlls = {},
+			cssls = {},
+			yamlls = {},
+			dockerls = {},
+			intelephense = {},
+			docker_compose_language_service = {},
 		},
 	},
-	config = function()
-		local caps = { capabilities = require("blink.cmp").get_lsp_capabilities() }
-		local lsp = require("lspconfig")
-		require("mason-lspconfig").setup({
-			handlers = {
-				function(ls)
-					lsp[ls].setup(caps)
-				end,
-			},
-		})
+	config = function(_, opts)
+		local module = require("lspconfig")
+		local mason_lspconfig = require("mason-lspconfig")
+
+		local list = {}
+
+		for lsp, cfg in pairs(opts.servers) do
+			cfg.capabilities = {} -- require("blink.cmp").get_lsp_capabilities(cfg.capabilities)
+			module[lsp].setup(cfg)
+			table.insert(list, lsp)
+		end
+
+		mason_lspconfig.setup({ ensure_installed = list })
 	end,
 }
